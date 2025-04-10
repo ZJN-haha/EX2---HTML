@@ -6,33 +6,41 @@
 </head>
 <body>
 
-  <!-- 顶部横幅图片 -->
-  <table width="100%">
+  <!-- 顶部横幅图片（居中） -->
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
-      <td width="75%">
-        <img src="assets/shin-chan-banner.jpg" alt="Shinchan Banner 1" width="100%">
-      </td>
-      <td width="25%">
-        <img src="assets/naughtiest-son.jpg" alt="Shinchan Banner 2" width="100%">
+      <td align="center">
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="75%">
+              <img src="assets/shin-chan-banner.jpg" alt="Shinchan Banner 1" width="100%">
+            </td>
+            <td width="25%">
+              <img src="assets/naughtiest-son.jpg" alt="Shinchan Banner 2" width="100%">
+            </td>
+          </tr>
+        </table>
       </td>
     </tr>
   </table>
 
-  <!-- 标题与导航 -->
-  <table width="100%">
+  <!-- 标题与导航（居中，同一行） -->
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td align="center">
-        <h1>Shinchan: Shiro and the Coal Town Game</h1>
         <p>
-          <a href="#">Characters</a> &nbsp;&nbsp;
-          <a href="#">Who's your favorite?</a>
+          <a href="#video" style="text-decoration:none">Shinchan: Shiro and the Coal Town Game</a>
+          &nbsp;&nbsp;
+          <a href="#characters" style="text-decoration:none">Characters</a>
+          &nbsp;&nbsp;
+          <a href="#favorite" style="text-decoration:none">Who's your favorite?</a>
         </p>
       </td>
     </tr>
   </table>
 
-  <!-- 视频展示部分 -->
-  <table width="100%">
+  <!-- 视频展示部分（居中） -->
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" id="video">
     <tr>
       <td align="center">
         <h2>Shinchan: Shiro and the Coal Town</h2>
@@ -46,12 +54,12 @@
     </tr>
   </table>
 
-  <!-- 角色展示部分（三列卡片布局） -->
-  <table width="100%">
+  <!-- 角色展示部分（居中） -->
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" id="characters">
     <tr>
       <td align="center">
         <h2>The Characters</h2>
-        <table width="100%" cellspacing="20">
+        <table border="0" cellspacing="20" cellpadding="0">
           <tr align="center">
             <td>
               <h3>Shinnosuke Nohara (Shinchan)</h3>
@@ -61,7 +69,7 @@
             <td>
               <h3>Misae Nohara (Mom)</h3>
               <img src="assets/character-misae.webp" alt="Misae" width="120">
-              <p>Shinchan’s short-tempered but loving mother, always trying to keep him in line.</p>
+              <p>Shinchan's short-tempered but loving mother, always trying to keep him in line.</p>
             </td>
             <td>
               <h3>Hiroshi Nohara (Dad)</h3>
@@ -91,57 +99,64 @@
     </tr>
   </table>
 
-  <!-- 表单区域 -->
-  <table width="100%">
+  <!-- 表单区域（按图片样式布局） -->
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" id="favorite">
     <tr>
-      <td align="center">
+      <td>
         <h2>Who's your favorite?</h2>
-        <table align="center" cellpadding="10">
-          <tr>
-            <td>
-              <form>
-                <p><strong>Who's your favorite character?</strong></p>
-                <input type="radio" name="character" value="Shinchan"> Shinchan<br>
-                <input type="radio" name="character" value="Misae"> Misae<br>
-                <input type="radio" name="character" value="Hiroshi"> Hiroshi<br>
-                <input type="radio" name="character" value="Himawari"> Himawari<br>
-                <input type="radio" name="character" value="Shiro"> Shiro<br>
-                <input type="radio" name="character" value="Kazama"> Toru Kazama<br><br>
-
-                <label>Character not in the list? Write their name:</label><br>
-                <input type="text" name="other_character" placeholder="Other character name"><br><br>
-
-                <label>Why do you like this character?</label><br>
-                <textarea name="reason" rows="3" cols="40"></textarea><br><br>
-
-                <label>Your Name:</label><br>
-                <input type="text" name="name"><br><br>
-
-                <label>Your Gender:</label><br>
+        <form>
+          <table border="0" cellspacing="10" cellpadding="0" width="100%">
+            <tr>
+              <td colspan="2"><p><strong>Who's your favorite character?</strong> Shinchan</p></td>
+            </tr>
+            <tr>
+              <td colspan="2"><strong>Character not in the list? Write their name below:</strong></td>
+            </tr>
+            <tr>
+              <td colspan="2">Your other favourite character: <input type="text" name="other_character" size="30" placeholder="Enter character name"></td>
+            </tr>
+            <tr>
+              <td colspan="2"><p><strong>Why do you like this character?</strong></p></td>
+            </tr>
+            <tr>
+              <td colspan="2"><textarea name="reason" rows="4" cols="50" placeholder="State your reasons in a couple of lines..."></textarea></td>
+            </tr>
+            <tr>
+              <td colspan="2"></td>
+            </tr>
+            <tr>
+              <td colspan="2"><h3>Tell us a bit more about yourself</h3></td>
+            </tr>
+            <tr>
+              <td colspan="2">Your Name: <input type="text" name="name" size="30" placeholder="Enter your name"></td>
+            </tr>
+            <tr>
+              <td colspan="2">Your Gender: 
                 <input type="radio" name="gender" value="male"> Male
-                <input type="radio" name="gender" value="female"> Female<br><br>
-
-                <label>Your Date of Birth:</label><br>
-                <input type="text" name="dob" placeholder="dd.mm.yyyy"><br><br>
-
-                <label>Your Email:</label><br>
-                <input type="email" name="email"><br><br>
-
-                <button type="submit">Submit</button>
-              </form>
-            </td>
-          </tr>
-        </table>
+                <input type="radio" name="gender" value="female"> Female
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">Your Date of Birth: <input type="text" name="dob" size="30" placeholder="dd.mm.yyyy"></td>
+            </tr>
+            <tr>
+              <td colspan="2">Your Email: <input type="text" name="email" size="30" placeholder="Enter your email"></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit">Submit</button></td>
+            </tr>
+          </table>
+        </form>
       </td>
     </tr>
   </table>
 
-  <!-- 页脚 -->
-  <table width="100%">
+  <!-- 页脚（居中） -->
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td align="center">
         <p>© 2025 Programming4</p>
-        <p>Contact us at: <a href="mailto:shinchan-lovers@justlearninghtml.com">shinchan-lovers@justlearninghtml.com</a></p>
+        <p>Get in touch with us: shinchan-lovers@justlearninghtml.com</p>
       </td>
     </tr>
   </table>
